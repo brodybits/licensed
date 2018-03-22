@@ -26,14 +26,6 @@ bundle install --path vendor/gems
 #   popd
 # fi
 #
-# if [ -n "$(which go)" ]; then
-#   export GOPATH="`pwd`/go"
-#
-#   pushd go/src/test
-#   go get || true
-#   popd
-# fi
-#
 # if [ -n "$(which cabal)" ]; then
 #   pushd haskell
 #   cabal new-build
