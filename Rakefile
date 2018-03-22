@@ -35,4 +35,4 @@ RuboCop::RakeTask.new do |t|
   t.options.push "-S"
 end
 
-task default: :test 
+task default: :test
