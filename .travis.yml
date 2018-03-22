@@ -4,3 +4,10 @@ rvm:
 
 install: ./script/bootstrap
 script: bundle exec rake test:core rubocop build
+
+matrix:
+  include:
+    - language: go
+      go: 1.7.x
+      before_script: ./script/setup/go
+      script: bundle exec rake test:go
