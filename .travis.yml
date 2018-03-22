@@ -1,12 +1,11 @@
-language: ruby
-rvm:
-  - 2.4.0
-
 install: ./script/bootstrap
-script: bundle exec rake test:core rubocop build
 
 matrix:
   include:
+    - language: ruby
+      rvm:
+        - 2.4.0
+      script: bundle exec rake test:core rubocop build
     - language: go
       go: 1.7.x
       before_script: ./script/setup/go
