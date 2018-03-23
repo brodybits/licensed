@@ -26,8 +26,3 @@ bundle install --path vendor/gems
 #   popd
 # fi
 #
-# if [ -n "$(which cabal)" ]; then
-#   pushd haskell
-#   cabal new-build
-#   popd
-# fi

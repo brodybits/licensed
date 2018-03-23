@@ -10,3 +10,8 @@ matrix:
       go: 1.7.x
       before_script: ./script/setup/go
       script: bundle exec rake test:go
+    - language: haskell
+      ghc:
+        - "7.10"
+      before_script: ./script/setup/cabal
+      script: bundle exec rake test:cabal
