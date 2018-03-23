@@ -38,6 +38,7 @@ matrix:
     - language: ruby
       rvm:
         - 2.4.0
+      before_install: unset BUNDLE_GEMFILE # leave Gemfile location up to setup and tests
       before_script: ./script/setup/bundler
       script: bundle exec rake test:bundler
 

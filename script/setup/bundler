@@ -10,7 +10,4 @@ fi
 BASE_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd $BASE_PATH/test/fixtures/bundler
 
-# explicitly set bundler Gemfile path.  the variable is set in CI
-# and needs to be overridden to install test fixtures properly
-export BUNDLE_GEMFILE=$(pwd)/Gemfile
 bundle install --path $BASE_PATH/test/fixtures/bundler/vendor/gems
