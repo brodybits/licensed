@@ -2,28 +2,44 @@ install: ./script/bootstrap
 
 matrix:
   include:
+    # core tests
     - language: ruby
       rvm:
         - 2.4.0
       script: bundle exec rake test:core rubocop build
+
+    # go source tests
     - language: go
       go: 1.7.x
       before_script: ./script/setup/go
       script: bundle exec rake test:go
+
+    # cabal source tests
     - language: haskell
       ghc: "8.2"
       before_script: ./script/setup/cabal
       script: bundle exec rake test:cabal
+
+    # npm source tests
     - language: node_js
       node_js: "8"
       before_script: ./script/setup/npm
       script: bundle exec rake test:npm
+
+    # bower source tests
     - language: node_js
       node_js: "8"
       before_script:
         - npm install -g bower
         - ./script/setup/bower
       script: bundle exec rake test:bower
+
+    # bundler source tests
+    - language: ruby
+      rvm:
+        - 2.4.0
+      before_script: ./script/setup/bundler
+      script: bundle exec rake test:bundler
 
 notifications:
   disabled: true

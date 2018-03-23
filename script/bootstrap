@@ -3,11 +3,3 @@ set -euo pipefail
 IFS=$'\n\t'
 
 bundle install --path vendor/gems
-
-# cd test/fixtures
-#
-# if [ -n "$(which bundle)" ]; then
-#   pushd bundler
-#   bundle install --path vendor/gems
-#   popd
-# fi
