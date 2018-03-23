@@ -14,6 +14,10 @@ matrix:
       ghc: "8.2"
       before_script: ./script/setup/cabal
       script: bundle exec rake test:cabal
+    - language: node_js
+      node_js: "8"
+      before_script: ./script/setup/npm
+      script: bundle exec rake test:npm
 
 notifications:
   disabled: true

@@ -18,11 +18,3 @@ bundle install --path vendor/gems
 #   bower install
 #   popd
 # fi
-#
-# # Install npm fixtures
-# if [ -n "$(which npm)" ]; then
-#   pushd npm
-#   npm install
-#   popd
-# fi
-#
