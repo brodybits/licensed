@@ -11,10 +11,3 @@ bundle install --path vendor/gems
 #   bundle install --path vendor/gems
 #   popd
 # fi
-#
-# # Install bower fixtures
-# if [ -n "$(which bower)" ]; then
-#   pushd bower
-#   bower install
-#   popd
-# fi
