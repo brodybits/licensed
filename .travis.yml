@@ -15,3 +15,6 @@ matrix:
         - "7.10"
       before_script: ./script/setup/cabal
       script: bundle exec rake test:cabal
+
+notifications:
+  disabled: true
